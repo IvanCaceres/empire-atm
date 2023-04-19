@@ -4,24 +4,98 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-rgb: 164, 193, 166;
+  --background-start-rgb: 164, 193, 166;
   --background-end-rgb: 255, 255, 255;
+  --machine-text-rgb: 0, 116, 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: rgb(var(--background-rgb)); */
+  background: rgb(var(--background-rgb));
+}
+
+/* reset */
+input {
+  background: transparent;
+}
+
+ input:focus-visible {
+  outline: none;
+  border: none;
+}
+
+.machine-text {
+  color: rgb(var(--machine-text-rgb));
+  text-shadow: 1px 1px 6px;
+}
+
+.machine-input {
+  display: inline;
+  outline: none;
+  border: none;
+  caret-color: transparent;
+  font-size: 1.5rem;
+  font-family: "Consolas", monospace;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px;
+}
+
+.machine-input::selection {
+  background: rgba(0, 116, 0, 0.33);
+}
+
+.machine-input:after {
+  position: relative;
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 22px;
+  top: 2px;
+  left: 1px;
+  animation: cursor-blink 1.2s steps(2) infinite;
+  box-shadow: 1px 1px 6px;
+  background: rgb(var(--machine-text-rgb));
+}
+
+.machine-input-container > input {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+}
+
+.marquee {
+  animation: marquee 5s linear infinite;
+}
+
+.imperial-emblem {
+  animation: rotate 12s infinite linear;
+  opacity: 0.7;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+@keyframes marquee{
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(-50%);}
+}
+
+@keyframes rotate{
+  from{ transform: rotate(-360deg); }
+  to{ transform: rotate(360deg); }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
 }
