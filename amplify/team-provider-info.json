@@ -10,6 +10,14 @@
       "StackName": "amplify-empireatm-dev-144312",
       "StackId": "arn:aws:cloudformation:us-east-1:148021931360:stack/amplify-empireatm-dev-144312/0a2cb270-dee2-11ed-9434-0eb879048017",
       "AmplifyAppId": "d3pbgz1dnj3eae"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3pbgz1dnj3eae",
+          "type": "cicd"
+        }
+      }
     }
   }
 }

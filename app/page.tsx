@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Typography from '@/components/Typography'
 import TerminalScreen from '@/components/TerminalScreen/TerminalScreen'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +14,8 @@ export default function Home() {
         <Image
           className="relative "
           src="/bg.webp"
-          alt="Next.js Logo"
+          alt="Imperial Crest"
+          unoptimized
           width={1024}
           height={1024}
           priority
