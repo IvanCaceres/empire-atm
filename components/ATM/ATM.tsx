@@ -3,23 +3,22 @@ import { FC, useState } from "react"
 import Image from 'next/image'
 import TerminalScreen from "../TerminalScreen/TerminalScreen"
 
-const ATM : FC = () => {
+const ATM: FC = () => {
     const [loaded, setLoaded] = useState(false)
-    console.log('loaded', loaded)
     return (
         <div className="relative flex place-items-center">
             <Image
-            className="relative"
-            src="/bg.webp"
-            alt="Imperial Crest"
-            unoptimized
-            width={1024}
-            height={1024}
-            priority
-            onLoad={() => {setLoaded(true)}}
+                className="relative"
+                src="/bg.webp"
+                alt="Imperial Crest"
+                unoptimized
+                width={1024}
+                height={1024}
+                priority
+                onLoad={() => { setLoaded(true) }}
             />
             {loaded && <TerminalScreen />}
-      </div>
+        </div>
     )
 }
 

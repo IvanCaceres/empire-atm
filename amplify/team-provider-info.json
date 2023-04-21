@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-empireatm-dev-144312-unauthRole",
       "StackName": "amplify-empireatm-dev-144312",
       "StackId": "arn:aws:cloudformation:us-east-1:148021931360:stack/amplify-empireatm-dev-144312/0a2cb270-dee2-11ed-9434-0eb879048017",
-      "AmplifyAppId": "d3pbgz1dnj3eae"
+      "AmplifyAppId": "d3pbgz1dnj3eae",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-empireatm-dev-144312-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "hosting": {
@@ -17,6 +18,22 @@
           "appId": "d3pbgz1dnj3eae",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "empireAuth": {}
+      },
+      "function": {
+        "empireAuthPostConfirmation": {
+          "deploymentBucketName": "amplify-empireatm-dev-144312-deployment",
+          "s3Key": "amplify-builds/empireAuthPostConfirmation-52534b756243566a7a79-build.zip"
+        },
+        "empireAuthPreSignup": {
+          "deploymentBucketName": "amplify-empireatm-dev-144312-deployment",
+          "s3Key": "amplify-builds/empireAuthPreSignup-35347242756930686965-build.zip"
+        }
+      },
+      "api": {
+        "empireatm": {}
       }
     }
   }

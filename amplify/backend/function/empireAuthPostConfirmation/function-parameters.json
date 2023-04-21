@@ -1,0 +1,23 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "empireAuth",
+  "functionName": "empireAuthPostConfirmation",
+  "resourceName": "empireAuthPostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "empireAuthPostConfirmation",
+  "skipEdit": true,
+  "permissions": {
+    "api": {
+      "empireatm": [
+        "Mutation"
+      ]
+    }
+  }
+}
