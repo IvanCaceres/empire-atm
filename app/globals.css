@@ -28,7 +28,7 @@ input {
   background: transparent;
 }
 
- input:focus-visible {
+input:focus-visible {
   outline: none;
   border: none;
 }
@@ -36,6 +36,17 @@ input {
 .machine-text {
   color: rgb(var(--machine-text-rgb));
   text-shadow: 1px 1px 6px;
+}
+
+.project-description a {
+  text-decoration: underline;
+  color: #0083d5;
+  font-weight: bold;
+}
+
+.project-description p {
+  margin-top: 6px;
+  font-weight: 600;
 }
 
 .machine-input {
@@ -66,7 +77,7 @@ input {
   background: rgb(var(--machine-text-rgb));
 }
 
-.machine-input-container > input {
+.machine-input-container>input {
   display: inline-block;
   width: auto;
   min-width: 0;
@@ -84,14 +95,24 @@ input {
   margin-top: 1rem;
 }
 
-@keyframes marquee{
-  0%{transform: translateX(100%);}
-  100%{transform: translateX(-50%);}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-@keyframes rotate{
-  from{ transform: rotate(-360deg); }
-  to{ transform: rotate(360deg); }
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes cursor-blink {
